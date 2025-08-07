@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: market-mvc
+    env: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/mvc.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
