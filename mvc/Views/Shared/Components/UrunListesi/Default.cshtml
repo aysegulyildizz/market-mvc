@@ -1,0 +1,21 @@
+@model List<mvc.Models.Product>
+
+@if (Model.Any())
+{
+    <ul class="list-group">
+        @foreach (var urun in Model)
+        {
+            <li class="list-group-item">
+                <strong>@urun.Name</strong> - 
+                @urun.Price TL - 
+                <stok-durumu product="@urun"></stok-durumu>  
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <div class="alert alert-warning">
+        There is no pruduct in this category.
+    </div>
+}

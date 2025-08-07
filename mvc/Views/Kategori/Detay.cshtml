@@ -1,0 +1,6 @@
+@model Kategori
+
+<h2>@Model.Name Kategorisi</h2>
+
+<!-- ViewComponent burada çağrılıyor -->
+@await Component.InvokeAsync("KategoriUrunleri", new { kategoriId = Model.Id })

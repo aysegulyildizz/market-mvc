@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YD0i98CWkrI=",
+  "success": true,
+  "projectFilePath": "/Users/aysegulyildiz/Documents/projects/mvc/mvc/mvc.csproj",
+  "expectedPackageFiles": [
+    "/Users/aysegulyildiz/.nuget/packages/newtonsoft.json/13.0.4-beta1/newtonsoft.json.13.0.4-beta1.nupkg.sha512"
+  ],
+  "logs": []
+}

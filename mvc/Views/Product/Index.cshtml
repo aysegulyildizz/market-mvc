@@ -1,0 +1,33 @@
+@model List<mvc.Models.Product>
+
+<h2>Product List</h2>
+    @foreach (var urun in Model)
+    {
+            @await Html.PartialAsync("_ProductCard", urun)
+    }
+
+<a href="/Product/Create" class="btn btn-success">Add New Product</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Stock</td>
+            <td>
+                <a href="/Product/Delete/@item.Id" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

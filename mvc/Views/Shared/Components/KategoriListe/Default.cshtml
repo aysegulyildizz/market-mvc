@@ -1,0 +1,15 @@
+
+@model List<mvc.Models.Kategori>
+
+<ul class="list-group">
+    @foreach (var kategori in Model)
+    {
+        <li class="list-group-item">
+            <a asp-controller="Home"
+               asp-action="Index"
+               asp-route-kategoriId="@kategori.Id">
+                @kategori.Name
+            </a>
+        </li>
+    }
+</ul>

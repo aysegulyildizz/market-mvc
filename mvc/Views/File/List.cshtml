@@ -1,0 +1,31 @@
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model FileInfo[]
+
+<h2>Dosya Listesi</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Dosya Adı</th>
+        <th>Oluşturulma Tarihi</th>
+        <th>Dosya Yolu</th>
+        <th>İşlem</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.CreationTime</td>
+            <td>@item.FullName</td>
+            <td>
+                <a asp-action="Delete" asp-route-name="@item.Name">Sil</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

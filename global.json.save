@@ -1,0 +1,15 @@
+{
+  "sdk": {
+    "version": "7.0.0",
+    "rollForward": "latestMinor",
+    "allowPrerelease": false
+  }
+{
+  "sdk": {
+    "version": "9.0.107"
+  }
+}
+
+dotnet run
+
+
